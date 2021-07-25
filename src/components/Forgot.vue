@@ -13,7 +13,7 @@
             <input type="email" class="form-control" v-model="email" placeholder="Email"/>
         </div>
 
-        <button class="btn btn-primary btn-block">Submit</button>
+        <button class="btn btn-primary btn-block">Enviar</button>
     </form>
     
 </template>
@@ -46,7 +46,7 @@
                     this.error = '';
 
                 } catch (e) {
-                    this.error = 'Erro ocorrido';
+                    this.error = 'Ocorreu um erro';
                     this.message = '';
                 }
             }

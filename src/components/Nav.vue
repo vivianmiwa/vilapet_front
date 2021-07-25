@@ -6,16 +6,16 @@
           
           <ul class="navbar-nav ml-auto" v-if="!user">
             <li class="nav-item">
-              <router-link to="/login" class="nav-link">Login</router-link>
+              <router-link to="/register_user" class="nav-link">Registrar</router-link>
             </li>
-            <li class="nav-item">
-              <router-link to="/register" class="nav-link">Sign up</router-link>
+             <li class="nav-item">
+              <router-link to="/login" class="nav-link">Entrar</router-link>
             </li>
           </ul>
           
           <ul class="navbar-nav ml-auto" v-if="!user">
             <li class="nav-item">
-              <a href="javascript:void(0)" @click="handleClick" class="nav-link">Logout</a>
+              <a href="javascript:void(0)" @click="handleClick" class="nav-link">Sair</a>
             </li>
           </ul>
 

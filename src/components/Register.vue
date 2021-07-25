@@ -4,11 +4,6 @@
         <h3>Registrar</h3>
 
         <div class="form-group">
-            <label>Nome de usuário</label>
-            <input type="text" class="form-control" v-model="nome_usuario" placeholder="Nome de usuário"/>
-        </div>
-
-        <div class="form-group">
             <label>E-mail</label>
             <input type="email" class="form-control" v-model="email" placeholder="Email"/>
         </div>
@@ -39,10 +34,8 @@
         },
         data() {
             return {
-                nome_usuario: '',
                 email: '',
                 senha: '',
-                repetir_senha: '',
                 error: ''
             }
         },
@@ -50,15 +43,13 @@
             async handleSubmit() {
                 try{
                     await axios.post('register', { // envia data para backend
-                        nome_usuario: this.nome_usuario,
                         email: this.email,
                         senha: this.senha,
-                        repetir_senha: this.repetir_senha
                     });
 
-                    this.$router.push('/login');
+                    this.$router.push('/register');
                 } catch (e) {
-                    this.error = 'Erro ocorreu'
+                    this.error = 'Erro ocorrido'
                 }
             }
         }
