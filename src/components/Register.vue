@@ -47,7 +47,7 @@
                         senha: this.senha,
                     });
 
-                    this.$router.push('/register');
+                    this.$router.push('/register_pet');
                 } catch (e) {
                     this.error = 'Erro ocorrido'
                 }
